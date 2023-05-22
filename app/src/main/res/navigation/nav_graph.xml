@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/peopleFragment"
-        android:name="com.example.parcialmoviles.PeopleFragment"
+        android:name="com.example.parcialmoviles.ui.people.person.PeopleFragment"
         android:label="fragment_people"
         tools:layout="@layout/fragment_people" >
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/personFragment"
-        android:name="com.example.parcialmoviles.PersonFragment"
+        android:name="com.example.parcialmoviles.ui.people.PersonFragment"
         android:label="fragment_person"
         tools:layout="@layout/fragment_person" />
     <fragment
         android:id="@+id/newPersonFragment"
-        android:name="com.example.parcialmoviles.newPersonFragment"
+        android:name="com.example.parcialmoviles.ui.people.newperson.newPersonFragment"
         android:label="fragment_new_person"
         tools:layout="@layout/fragment_new_person" />
 </navigation>
