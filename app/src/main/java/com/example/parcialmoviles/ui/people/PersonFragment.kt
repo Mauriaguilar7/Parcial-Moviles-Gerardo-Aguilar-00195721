@@ -34,29 +34,8 @@ class PersonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.viewmodel = peopleViewModel
 
     }
 
-private fun observeStatus(){
-    peopleViewModel.status.observe(viewLifecycleOwner){status ->
-        when {
-            status.equals(PeopleViewModel.PERSON_CREATED) ->{
-                Log.d(TAG, status)
-                Log.d(TAG, peopleViewModel.getPeople().toString())
-                peopleViewModel.clearStatus()
-                findNavController().popBackStack()
-            }
-
-            status.equals(PeopleViewModel.WRONG_INFORMATION) ->{
-                Log.d(TAG, status)
-            }
-        }
-    }
-}
-
-
-
-    companion object {
-        const val TAG ="TAG"
-    }
 }

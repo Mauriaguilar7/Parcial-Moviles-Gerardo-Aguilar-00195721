@@ -32,14 +32,11 @@ private val peopleViewModel :PeopleViewModel by activityViewModels {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.actionButton.setOnClickListener {
+        binding.addButton.setOnClickListener {
             peopleViewModel.clearData()
             it.findNavController().navigate(R.id.action_peopleFragment_to_newPersonFragment)
         }
     }
 
-    companion object {
 
-
-    }
 }

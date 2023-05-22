@@ -4,8 +4,10 @@ import android.provider.Contacts
 import android.text.Spannable.Factory
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.parcialmoviles.PeopleReviewerApplication
 import com.example.parcialmoviles.data.model.PeopleModel
 import com.example.parcialmoviles.repositories.PeopleRepository
 
@@ -59,6 +61,10 @@ class PeopleViewModel (private val repository : PeopleRepository) : ViewModel() 
 
     companion object {
         val Factory = viewModelFactory {
+            initializer {
+                val app = this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as PeopleReviewerApplication
+                PeopleViewModel(app.peopleRepository)
+            }
 
         }
 
