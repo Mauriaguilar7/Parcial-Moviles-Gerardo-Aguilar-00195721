@@ -6,6 +6,6 @@ val name = "Mauricio"
 val lastname = "Aguilar"
 
 
-var people = mutableListOf(
+var peoples = mutableListOf(
     PeopleModel(name,lastname)
 )
