@@ -35,6 +35,7 @@ class PersonFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.viewmodel = peopleViewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
     }
 
